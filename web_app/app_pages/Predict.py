@@ -159,7 +159,7 @@ def show():
     
     preset_cols = st.columns(4)
     with preset_cols[0]:
-        if st.button("👤 شخص سليم", width='stretch'):
+        if st.button("👤 شخص سليم", use_container_width=True):
             st.session_state.last_input_values = {
                 'pregnancies': 0, 'glucose': 90, 'blood_pressure': 70,
                 'skin_thickness': 20, 'insulin': 70, 'bmi': 22.0,
