@@ -262,8 +262,8 @@ with st.sidebar:
             </div>
             """, unsafe_allow_html=True)
         else:
-            # الزر العادي - تصميم نظيف مع تأثير hover
-            if st.button(f"{item['icon']}  {item['label']}", key=f"nav_{item['id']}", width='stretch'):
+            # الزر العادي - تم التعديل هنا
+            if st.button(f"{item['icon']}  {item['label']}", key=f"nav_{item['id']}", use_container_width=True):
                 st.session_state.current_page = item['id']
                 save_user_data()
                 st.rerun()
@@ -347,14 +347,16 @@ with st.sidebar:
     
     col_save, col_clear = st.columns(2)
     with col_save:
-        if st.button("💾 حفظ", width='stretch'):
+        # تم التعديل هنا أيضاً
+        if st.button("💾 حفظ", use_container_width=True):
             if save_user_data():
-                st.toast("✅ تم حفظ البيانات", icon="💾",)
+                st.toast("✅ تم حفظ البيانات", icon="💾")
             else:
                 st.toast("❌ فشل الحفظ", icon="⚠️")
     
     with col_clear:
-        if st.button("🗑️ مسح الكل", width='stretch'):
+        # تم التعديل هنا أيضاً
+        if st.button("🗑️ مسح الكل", use_container_width=True):
             clear_user_data()
             st.toast("🗑️ تم مسح جميع البيانات", icon="🔄")
             st.rerun()
