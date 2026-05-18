@@ -192,7 +192,7 @@ def show():
             st.rerun()
     
     with preset_cols[3]:
-        if st.button("🔄 إعادة تعيين", width='stretch'):
+        if st.button("🔄 إعادة تعيين", use_container_width=True):
             st.session_state.last_input_values = {
                 'pregnancies': 0, 'glucose': 120, 'blood_pressure': 70,
                 'skin_thickness': 20, 'insulin': 80, 'bmi': 25.0,
