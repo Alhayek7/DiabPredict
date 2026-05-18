@@ -170,7 +170,7 @@ def show():
             st.rerun()
     
     with preset_cols[1]:
-        if st.button("⚠️ خطر متوسط", width='stretch'):
+        if st.button("⚠️ خطر متوسط", use_container_width=True):
             st.session_state.last_input_values = {
                 'pregnancies': 2, 'glucose': 140, 'blood_pressure': 85,
                 'skin_thickness': 25, 'insulin': 120, 'bmi': 28.0,
@@ -181,7 +181,7 @@ def show():
             st.rerun()
     
     with preset_cols[2]:
-        if st.button("🔴 خطر مرتفع", width='stretch'):
+        if st.button("🔴 خطر مرتفع", use_container_width=True):
             st.session_state.last_input_values = {
                 'pregnancies': 5, 'glucose': 180, 'blood_pressure': 95,
                 'skin_thickness': 35, 'insulin': 200, 'bmi': 32.0,
@@ -340,7 +340,7 @@ def show():
         physical_activity_value = ["قليل", "متوسط", "كثير"].index(physical_activity)
         
         # زر التنبؤ
-        predict_btn = st.button("🔍 تنبؤ", width='stretch', type="primary")
+        predict_btn = st.button("🔍 تنبؤ", use_container_width=True, type="primary")
     
     # ============================================
     # نتائج التنبؤ
