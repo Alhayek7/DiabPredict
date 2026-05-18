@@ -1,14 +1,17 @@
 import os
 
 # ============================================
-# إعدادات المسارات - يجب أن تكون أول شيء
+# إعدادات المسارات - استخدام المجلدات المحلية
 # ============================================
 
+# الحصول على المسار الأساسي للتطبيق
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 # إنشاء مجلد data إذا لم يكن موجوداً
-DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
+DATA_DIR = os.path.join(BASE_DIR, "data")
 os.makedirs(DATA_DIR, exist_ok=True)
 
-# إنشاء مجلد utils داخل data
+# إنشاء مجلد utils داخل data (بدلاً من /mnt/agents)
 UTILS_DIR = os.path.join(DATA_DIR, "utils")
 os.makedirs(UTILS_DIR, exist_ok=True)
 
