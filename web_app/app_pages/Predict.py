@@ -599,24 +599,17 @@ def show():
             col_action1, col_action2, col_action3 = st.columns(3)
 
             with col_action1:
-                if st.button("🤖 اسأل المساعد الذكي", width='stretch'):
-                    st.session_state.current_page = "assistant"
-                    st.session_state.last_risk = risk_percentage
-                    st.session_state.last_features = features
-                    save_user_data()
-                    st.rerun()
-
+                if st.button("🤖 اسأل المساعد الذكي", use_container_width=True):
+                    ...
+            
             with col_action2:
-                if st.button("📊 عرض السجل", width='stretch'):
-                    st.session_state.current_page = "history"
-                    save_user_data()
-                    st.rerun()
-
+                if st.button("📊 عرض السجل", use_container_width=True):
+                    ...
+            
             with col_action3:
-                if st.button("💾 حفظ التوقع", width='stretch'):
-                    save_user_data()
-                    st.toast("✅ تم حفظ التوقع بنجاح", icon="💾")
-                    
+                if st.button("💾 حفظ التوقع", use_container_width=True):
+                    ...
+                                
             # ============================================
             # ⚠️ نظام التنبيهات والتحذيرات
             # ============================================
