@@ -420,7 +420,7 @@ def show():
         
         col1, col2, col3 = st.columns([1, 2, 1])
         with col2:
-            if st.button("🔮 اذهب إلى صفحة التنبؤ", width='stretch', type="primary"):
+            if st.button("🔮 اذهب إلى صفحة التنبؤ", use_container_width=True, type="primary"):
                 st.session_state.current_page = "predict"
                 save_user_data()
                 st.rerun()
