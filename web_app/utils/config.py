@@ -1,12 +1,16 @@
-
 import os
 
-# إنشاء مجلد utils
-os.makedirs("/mnt/agents/output/utils", exist_ok=True)
+# ============================================
+# إعدادات المسارات - يجب أن تكون أول شيء
+# ============================================
 
-config_py = """
-إعدادات التطبيق - DiabPredict
-"""
+# إنشاء مجلد data إذا لم يكن موجوداً
+DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
+os.makedirs(DATA_DIR, exist_ok=True)
+
+# إنشاء مجلد utils داخل data
+UTILS_DIR = os.path.join(DATA_DIR, "utils")
+os.makedirs(UTILS_DIR, exist_ok=True)
 
 # ============================================
 # معلومات التطبيق
