@@ -168,10 +168,10 @@ def show():
     </style>
     """, unsafe_allow_html=True)
     
-    # زر التنبؤ الرئيسي
+    # زر التنبؤ الرئيسي - تم التعديل هنا
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
-        if st.button("🔮 ابدأ التنبؤ الآن", width='stretch', type="primary"):
+        if st.button("🔮 ابدأ التنبؤ الآن", use_container_width=True, type="primary"):
             st.session_state.current_page = "predict"
             st.rerun()
     
@@ -567,9 +567,10 @@ def show():
     </div>
     """, unsafe_allow_html=True)
     
+    # زر التقييم الثاني - تم التعديل هنا
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
-        if st.button("🚀 ابدأ تقييمك الآن", width='stretch', type="primary"):
+        if st.button("🚀 ابدأ تقييمك الآن", use_container_width=True, type="primary"):
             st.session_state.current_page = "predict"
             st.rerun()
     
